@@ -3,6 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
+  <% if enhanced_cart.length > 0 %>
 
   <div class="panel panel-default items">
     <table class="table table-bordered">
@@ -48,5 +49,11 @@
       <% end %>
     </div>
   </div>
+
+  <% else %>
+  <h2>Currently the Cart is Empty</h2>
+  <a href="<%= root_path %>">Return to the homepage and continue shopping</a>
+
+  <% end %>
 
 </section>
